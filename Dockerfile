@@ -1,5 +1,5 @@
 FROM python:3.9-alpine3.13
-LABEL maintainer="priyadeveloper"
+LABEL maintainer="londonappdeveloper.com"
 
 ENV PYTHONUNBUFFERED 1
 
@@ -11,7 +11,7 @@ EXPOSE 8000
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /tmp/requirements.txt && \
-    rm -rt /tmp && \
+    rm -rf /tmp && \
     adduser \
         --disabled-password \
         --no-create-home \
